@@ -1,0 +1,223 @@
+<ion-header>
+  <ion-navbar>
+    
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="transparent-header">
+
+<div id="profile-bg" [ngStyle]="{'background-image': 'url(' + background.coverImage +')'}"></div>
+<div id="content">
+  <div id="profile-info" padding>
+    <img id="profile-image" src="./assets/img/avatar/ian-avatar.png" >
+    <h3 id="profile-name">Name :{{user.FirstName}}{{user.LastName}}</h3>
+    <p> DateOfBirth :{{user.DOB}} Age :{{user.Age}} </p>
+     <p class="profile-InsuranceCompany">InsuranceCompany:{{user.InsuranceCompany}}</p>
+        <p class="profile-description">PolicyNumber :{{user.PolicyNumber}}</p>
+    <!-- <button ion-button *ngIf="!following" small color="purple" (click)="follow()">Follow</button>
+    <button ion-button *ngIf="following" class="follow-button" small color="purple" (click)="follow()">Following<ion-icon name="checkmark"></ion-icon></button> -->
+  </div>
+  <hr/>
+  <!-- <ion-row class="profile-numbers">
+    <ion-col col-4>
+      <p>Followers</p>
+      <span>{{user.followers}}</span>
+    </ion-col>
+    <ion-col col-4>
+      <p>Following</p>
+      <span>{{user.following}}</span>
+    </ion-col>
+    <ion-col col-4>
+      <p>Posts</p>
+      <span>{{user.posts}}</span>
+    </ion-col>
+  </ion-row> -->
+  <!-- <div id="posts">
+    <ion-card *ngFor="let post of posts">
+      <ion-item>
+        <ion-avatar item-start>
+          <img [src]="user.profileImage">
+        </ion-avatar>
+        <h2 class="sticky">{{user.name}}</h2>
+        <p>{{post.date}}</p>
+      </ion-item>
+      <img [src]="post.postImageUrl" (click)="imageTapped(post)">
+      <ion-card-content>
+        <p>{{post.text}}</p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col col-4>
+          <button ion-button color="purple" clear small icon-left (click)="like(post)">
+              <ion-icon name='thumbs-up'></ion-icon>
+              {{post.likes}} Likes
+            </button>
+        </ion-col>
+        <ion-col col-5>
+          <button ion-button no-padding color="purple" clear small icon-left (click)="comment(post)">
+              <ion-icon name='text'></ion-icon>
+              {{post.comments}} Comments
+            </button>
+        </ion-col>
+        <ion-col col-3 align-self-center text-center>
+          <p>
+            {{post.timestamp}}
+          </p>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div> -->
+
+<ion-row class="row">
+<ion-col>
+    <ion-card responsive-sm style="background: coral" (click)="presentProfileModal()">
+      <ion-card-content class="card-content">
+        <h1 style="text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;">Video Chat</h1>
+  <!-- <ion-icon name="git-network" role="img" style="
+  float: right;
+  color: gray;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  " class="icon icon-md ion-md-git-network" aria-label="git network" ng-reflect-name="git-network"></ion-icon> -->
+          </ion-card-content>
+    </ion-card>
+  </ion-col>
+  
+</ion-row>
+<ion-row class="row"> 
+<ion-col width-50>
+    <ion-card  responsive-sm  style="background: blueviolet" (click)="getTeleHealthdata()">  
+      <ion-card-content class="card-content">
+        <h1 style="text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;">Tele Health</h1>
+ <!-- <ion-icon name="git-network" role="img" style="
+  float: right;
+  color: gray;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  " class="icon icon-md ion-md-git-network" aria-label="git network" ng-reflect-name="git-network"></ion-icon> -->
+          </ion-card-content>
+    </ion-card> 
+  </ion-col>
+</ion-row>
+<ion-row class="row">
+<ion-col >
+    <ion-card responsive-sm  style="background: aqua">
+      <ion-card-content class="card-content">
+        <h1 style="text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;">My Reports</h1>
+  <!-- <ion-icon name="git-network" role="img" style="
+  float: right;
+  color: gray;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  " class="icon icon-md ion-md-git-network" aria-label="git network" ng-reflect-name="git-network"></ion-icon> -->
+          </ion-card-content>
+    </ion-card>
+  </ion-col>
+  
+</ion-row>
+<ion-row class="row">
+<ion-col >
+    <ion-card responsive-sm  style="background: brown">
+      <ion-card-content class="card-content">
+        <h1 style="text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;">My vitals</h1>
+ <!-- <ion-icon name="git-network" role="img" style="
+  float: right;
+  color: gray;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  " class="icon icon-md ion-md-git-network" aria-label="git network" ng-reflect-name="git-network"></ion-icon> -->
+          </ion-card-content>
+    </ion-card>
+  </ion-col>
+</ion-row>
+
+<ion-row class="row">
+<ion-col >
+    <ion-card responsive-sm  style="background: cadetblue">
+      <ion-card-content class="card-content">
+        <h1 style="text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;">My Hospital admits/discharges</h1>
+  <!-- <ion-icon name="git-network" role="img" style="
+  float: right;
+  color: gray;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  " class="icon icon-md ion-md-git-network" aria-label="git network" ng-reflect-name="git-network"></ion-icon> -->
+          </ion-card-content>
+    </ion-card>
+  </ion-col>
+ 
+</ion-row>
+<ion-row class="row">
+<ion-col >
+    <ion-card responsive-sm  style="background: darkcyan">
+      <ion-card-content class="card-content">
+        <h1 style="text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;">My health care providers</h1>
+ <!-- <ion-icon name="git-network" role="img" style="
+  float: right;
+  color: gray;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  " class="icon icon-md ion-md-git-network" aria-label="git network" ng-reflect-name="git-network"></ion-icon> -->
+          </ion-card-content>
+    </ion-card>
+  </ion-col> 
+
+
+</ion-row>
+<ion-row class="row">
+<ion-col >
+    <ion-card responsive-sm  style="background:rosybrown">
+      <ion-card-content class="card-content">
+        <h1 style="text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;">My Medications</h1>
+  <!-- <ion-icon name="git-network" role="img" style="
+  float: right;
+  color: gray;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  " class="icon icon-md ion-md-git-network" aria-label="git network" ng-reflect-name="git-network"></ion-icon> -->
+          </ion-card-content>
+    </ion-card>
+  </ion-col>
+ 
+</ion-row>
+<ion-row class="row">
+<ion-col >
+    <ion-card responsive-sm  style="background: forestgreen">
+      <ion-card-content class="card-content">
+        <h1 style="text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;">My Medical Problems</h1>
+ <!-- <ion-icon name="git-network" role="img" style="
+  float: right;
+  color: gray;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  " class="icon icon-md ion-md-git-network" aria-label="git network" ng-reflect-name="git-network"></ion-icon> -->
+          </ion-card-content>
+    </ion-card>
+  </ion-col> 
+</ion-row>
+</div>
+</ion-content>

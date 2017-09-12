@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+     Video Chat
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+
+   <!-- <ion-grid>
+        <ion-row *ngFor="let trio of userNames">
+            <ion-col >
+              
+                <ion-item>{{ trio }}</ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+  -->
+    <button ion-button icon-start  [disabled]="startDisable" (click)="startChat()"> 
+        <ion-icon name="play"></ion-icon>
+        start
+      </button>
+      
+      <button ion-button icon-end  [disabled]="stopDisable" (click)="stopChat()">
+        stop
+        <ion-icon name="square"></ion-icon>
+      </button>
+ <!-- <h1>Hello OpenTokJS</h1>
+	<p>Publisher:</p>
+	<div id="publisher"></div>
+	<p>Subscriber:</p>
+<div id="subscriber"></div>-->
+
+<h3>You:</h3>
+  <div id="videos">
+<div id="publisher"></div>
+<div id="subscriber"></div>
+  </div>
+
+
+<h3>Subscribers:</h3>
+<div id="allStreams">
+  <div id="layout"></div>
+</div>
+<div id="bigvideoholder">
+</div>
+
+<ion-grid id="bigvideoholder">
+  
+  <!--<ion-row *ngFor="let trio of getTriples();">-->
+      <ion-row >
+      <ion-col *ngFor="let item of streamArray">
+          <ion-item>
+            <div [id]="item.stream.id" style="height:550px"></div>
+            <button ion-fab color="danger" navPush="Chat"   [navParams]="sessionDetails"  >  <ion-icon name="text"></ion-icon></button></ion-item>
+            </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+<!--
+<ion-grid id="bigvideoholder">
+  <ion-row >
+      <ion-col width-33 *ngFor="let item of streamArray">
+          <div [id]="item.stream.id" style="height:550px"></div>
+        </ion-col>
+      
+      <button md-icon-button color="accent" (click)="bigScreen(item.stream)">
+        <i class="material-icons">launch</i>
+      </button>
+  </ion-row>
+</ion-grid>
+-->
+<!--<ul class="heroes" id="bigvideoholder">s
+  <li *ngFor="let item of streamArray">
+    <div [id]="item.stream.id" style="height:200px"></div>
+    <button md-icon-button color="accent" (click)="bigScreen(item.stream)">
+      <i class="material-icons">launch</i>
+    </button>
+  </li>
+</ul>-->
+
+
+
+
+
+</ion-content>

@@ -1,0 +1,45 @@
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+<ion-content [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}">
+  <div class="login-container">
+    <img class="logo" src="./assets/guardian.png" />
+    
+    <!--*********** Form ***********-->
+    <form  (submit)="login()" novalidate>
+      <ion-item>
+        <ion-label floating>Username</ion-label>
+        <ion-input tappable color="light" aria-placeholder="RPatel@itsguardian.com" #email type="email" >
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input tappable #password aria-placeholder="Dts@123456" type="password">
+        </ion-input>
+      </ion-item>
+
+      <!-- <ion-item class="error-message">
+        <p *ngIf="!loginForm.controls.email.valid  &&
+                loginForm.controls.email.dirty">*Please enter a valid email.</p>
+        <p *ngIf="!loginForm.controls.password.valid  &&
+                loginForm.controls.password.dirty">*Password needs more than 6 characters.</p>
+      </ion-item> -->
+      <!-- <re-captcha
+      (resolved)="resolved($event)"
+      siteKey="6LcrWDAUAAAAALGGgrj3uf170oof-Tf7paZfDIB1"
+        ></re-captcha>  -->
+      <div class="submit-box">
+        <button ion-button block type="submit"
+        nav color="blue2">Log in</button>
+        
+        <button ion-button type="button" block icon-left color="light" outline (click)="createAccount()" margin-top>
+            <ion-icon name="ios-create"></ion-icon> Create new account
+        </button>
+      </div>
+    </form>
+  </div>
+
+</ion-content>
+<ion-footer>
+  <button class="bottom" ion-button  type="button"  clear full color="light" (click)="forgot()">Forgot your password? </button>
+</ion-footer>

@@ -1,0 +1,103 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-opentok-android-permissions",
+        "scope": null,
+        "escapedName": "cordova-opentok-android-permissions",
+        "name": "cordova-opentok-android-permissions",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "E:\\CodingStyle\\IDE\\opentok\\node_modules"
+    ]
+  ],
+  "_from": "cordova-opentok-android-permissions@latest",
+  "_id": "cordova-opentok-android-permissions@1.0.1",
+  "_inCache": true,
+  "_location": "/cordova-opentok-android-permissions",
+  "_nodeVersion": "0.12.7",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/cordova-opentok-android-permissions-1.0.1.tgz_1461444585297_0.992589277215302"
+  },
+  "_npmUser": {
+    "name": "patwaswapnil",
+    "email": "patwaswapnil@gmail.com"
+  },
+  "_npmVersion": "2.11.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-opentok-android-permissions",
+    "scope": null,
+    "escapedName": "cordova-opentok-android-permissions",
+    "name": "cordova-opentok-android-permissions",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-opentok-android-permissions/-/cordova-opentok-android-permissions-1.0.1.tgz",
+  "_shasum": "fe66145f1dde1f1fcb2931f3cb516ecdbf5d1128",
+  "_shrinkwrap": null,
+  "_spec": "cordova-opentok-android-permissions",
+  "_where": "E:\\CodingStyle\\IDE\\opentok\\node_modules",
+  "author": {
+    "name": "Swapnil Patwa"
+  },
+  "bugs": {
+    "url": "https://github.com/patwaswapnil/cordova-opentok-android-permissions/issues"
+  },
+  "cordova": {
+    "id": "cordova-opentok-android-permissions",
+    "platforms": [
+      "android"
+    ]
+  },
+  "dependencies": {},
+  "description": "This cordova plugin invokes permission for all the hardwares which require for a video chat",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "fe66145f1dde1f1fcb2931f3cb516ecdbf5d1128",
+    "tarball": "https://registry.npmjs.org/cordova-opentok-android-permissions/-/cordova-opentok-android-permissions-1.0.1.tgz"
+  },
+  "homepage": "https://github.com/patwaswapnil/cordova-opentok-android-permissions#readme",
+  "keywords": [
+    "Opentok",
+    "permissions",
+    "opentok",
+    "openSSL",
+    "videochat",
+    "android",
+    "Camera",
+    "android",
+    "Audio",
+    "android",
+    "cordova",
+    "media",
+    "android",
+    "camera",
+    "audio"
+  ],
+  "license": "Apache-2.0",
+  "maintainers": [
+    {
+      "name": "patwaswapnil",
+      "email": "patwaswapnil@gmail.com"
+    }
+  ],
+  "name": "cordova-opentok-android-permissions",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patwaswapnil/cordova-opentok-android-permissions.git"
+  },
+  "scripts": {},
+  "version": "1.0.1"
+}
